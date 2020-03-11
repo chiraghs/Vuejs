@@ -1,0 +1,31 @@
+#bag{
+    width: 100px;
+    height: 400px;
+    margin: 0 auto;
+    background: url("/img/Bag.jpg") center no-repeat;
+}
+
+#bag.destroy{
+    width: 100px;
+    height: 400px;
+    margin: 0 auto;
+    background: url("/img/Destroy.jpg") center no-repeat;
+}
+
+
+#health{
+    width:200px;
+    margin: 0 auto 20px;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+#health div{
+    height: 10px;
+    background-color: green;
+}
+
+#control{
+    width: 200px;
+    margin: 0 auto;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUNCH IT</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/vue"></script>
+    
+</head>
+<body>
+
+<div id="app">
+    <!-- bag-->
+    <div id="bag" v-bind:class="{destroy:ended}">
+
+    </div>
+
+
+    <!-- health-->
+    <div id="health">
+        <div v-bind:style="{width: health + '%'}">
+
+        </div>
+    </div>
+
+
+
+    <!-- Controls-->
+
+    <div id="control">
+        <button v-on:click="punch" v-show="!ended">Punch</button>
+        <button v-on:click="restart">Restart</button>
+    </div>
+</div>
+
+
+<script src="main_vue.js"></script>
+</body>
+</html>
