@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Products - Components</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,46 +12,7 @@
     </div>
 
     <div id="app">
-        <div class="product">
-
-
-            <div class="product-image">
-                <img v-bind:src="image" v-bind:alt="decimg">
-            </div>
-
-
-
-            <div class="product-info">
-                <h1>{{title}}</h1>
-                <p v-if='instock > 10'>In Stock</p>
-                <p v-else-if='instock <10 && instock  > 0'>Hurry, Almost Sold Out!!</p>
-                <p v-else>out of Stock</p>
-
-                <ul>
-                    <li v-for="detail in details">{{detail}}</li>
-                </ul>
-
-                <div v-for="variant in variants" 
-                     :key="variant.variantID"
-                     class="color-box"
-                     :style="{backgroundColor:variant.variantColor}"
-                     @mouseover="updateImage(variant.variantImage)">
-                    
-                </div>
-
-                <button v-on:click="addtocart()" :disabled="instock <= 0"
-                                 :class="{disabledButton: instock <=0}"
-                >Add to cart</button>
-               
-                <div class="cart">
-                    <p>Cart ({{cart}})</p>
-                </div>
-
-
-            </div>
-
-
-        </div>
+        <product></product>
     </div>
     
 
