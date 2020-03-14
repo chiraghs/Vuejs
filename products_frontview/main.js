@@ -2,14 +2,15 @@ var app =new Vue({
     el:'#app',
     data:{
         product:'socks',
+        brand:'Vue Masterful',
         image:'./images/green.jpg',
         decimg:'image_of_product',
-        instock:-1,
+        instock:5,
         cart:0,
         details:['85% cotton','winter wear','ankle fit'],
         variants:[
-        {variantID:2234,variantColor:"Green",variantImage:"./images/green.jpg"},
-        {variantID:2235,variantColor:"Blue",variantImage:"./images/blue.jpg"}
+        {variantID:2234,variantColor:"green",variantImage:"./images/green.jpg"},
+        {variantID:2235,variantColor:"blue",variantImage:"./images/blue.jpg"}
                  ]
     },
     methods:{
@@ -20,5 +21,10 @@ var app =new Vue({
             this.image=variantImage;
         }
 
+    },
+    computed:{
+        title(){
+           return this.brand +" "+this.product
+        }
     }
 })
